@@ -1,0 +1,206 @@
+@import 'nib'
+@import url(https://fonts.googleapis.com/css?family=Montserrat)
+@import url(https://fonts.googleapis.com/css?family=Anton)
+naranja=#F57C00
+negro=#000000
+*
+	margin 0
+	padding 0
+body
+	background-image url('../img/brickwall_@2X.png')
+	overflow-x hidden
+nav
+	background-color rgba(255,255,255,1);
+	position fixed
+	top 0
+	left 0
+	width 100%
+	height auto
+	text-align center
+	z-index 100
+	overflow hidden
+	border-bottom 5px solid naranja
+	ul
+		font-size 0
+		margin-bottom 0
+		position relative
+		bottom 0
+		top 0
+		li
+			display inline-block
+			list-style none
+			margin-left 20px
+			&:first-child
+				margin-lft 0px
+				float left
+			&:nth-child(2)
+				margin-left 0px
+			&.item
+				margin-top 73px
+				a:hover
+					text-decoration none
+					color #fff
+					&:after
+						transform translate(0) rotate(0)
+						border-radius 0 0 40px 0
+				a:after
+					position: absolute
+					top 0
+					bottom 0
+					left 0
+					right 0
+					content ''
+					background-color naranja
+					z-index -100
+					transform rotate(90deg) translateY(-210%)
+					transition all 0.3s
+				a:focus
+					text-decoration none !important
+		a
+			position relative
+			text-decoration none
+			font-size 20px
+			letter-spacing: 2px;
+			color negro
+			display inline-block
+			padding 15px
+			z-index 120
+			transition all 0.3s
+			overflow hidden
+			font-family 'Montserrat', sans-serif
+.nav-responsive
+	background-color rgba(255,255,255,1);
+	padding 1em 0
+	display none
+	position fixed
+	top 0
+	left 0
+	width 100%
+	height auto
+	text-align right 
+	z-index 100
+	overflow hidden
+	border-bottom 5px solid naranja
+	h2
+		float left
+		font-size 1.8em
+		padding 0.3em 0
+		padding 0
+		margin 0 0 0 10px
+	.glyphicon-menu-hamburger
+		font-size 2.5em
+		color naranja
+		margin-right 20px
+		cursor pointer
+header 
+	padding 0 !important
+	z-index -10
+	position relative
+	margin-top 115px
+	.mas
+		position: absolute
+		top:0
+		left 0
+		bottom 0
+		right 0
+		background-color rgba(246,206,121,0.3)
+		h1
+			position: relative
+			left 3%
+			color #fff
+			letter-spacing: 5px;
+			width 40%
+			font-size 80px
+			text-align left
+			font-family: 'Anton', sans-serif
+			strong
+				color #F68210
+section	
+	position relative
+	padding 
+	&>h1
+		text-align center
+		margin 0 !important
+		padding 50px
+		color #fff
+		font-size 50px
+		background-color naranja
+		font-weight bold
+		font-family: 'Josefin Sans', sans-serif !important
+		letter-spacing 0.3em
+	&.container-fluid
+		padding 0 !important
+	article 
+		text-align center
+		h2
+			text-align center
+			font-family: 'Josefin Sans', sans-serif
+			letter-spacing 0.2em
+			font-size 40px
+		table
+			background-color #fff
+@media screen and (max-width: 1060px)
+	.brand
+		width 100%
+	.item
+		margin-top 0 !important
+	header
+		margin-top 195px
+		.mas h1
+			font-size 4em
+
+@media screen and (max-width: 760px)
+	.nav-responsive
+		display block
+		h2
+			margin-top 4px
+	nav
+		width 300px;
+		height calc(100% - 72px)
+		left -300px
+		top 72px
+		border-bottom none
+		ul li.item
+			width 100% !important
+			margin-left 0
+			margin-top 0
+			a
+				width 100% !important
+				display block !important
+				padding 40px 0
+				transition all 0.3s
+				left -100%
+				&:hover
+					color negro
+				&:after
+					position absolute
+					content ''
+					top 104px
+					bottom 0
+					left 0
+					right 0
+					height 4px;
+					transform rotate(0)translate(0)
+			&:nth-child(2) a
+				transition-delay 0.2s
+			&:nth-child(3) a
+				transition-delay 0.4s
+			&:nth-child(4) a
+				transition-delay 0.6s
+			&:nth-child(5) a
+				transition-delay 0.8s
+			&:nth-child(6) a
+				transition-delay 1s
+	.animitem
+		left 0
+		opacity 1
+	.brand
+		display none
+	header
+		margin-top:72px
+		.mas h1
+			font-size 2.3em
+			width 60%
+	section>h1
+		font-size 2.3em
+				
