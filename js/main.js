@@ -8,7 +8,6 @@ function anclas(e){
 	e.preventDefault();
     var href = $(this).attr('href');
     var altonav=$('nav').innerHeight();
-    console.log(altonav);
     $('html, body').animate({ scrollTop : $( href ).offset().top-altonav}, 'easeInOutExpo');
 }
 function menu(){
@@ -35,3 +34,7 @@ function menu(){
 	}
 	
 }
+
+
+
+
